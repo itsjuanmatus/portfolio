@@ -2,7 +2,7 @@ import Head from "next/head";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen py-2 pl-72 bg-white dark:bg-purple-137 overflow-x-hidden">
+    <div className="flex flex-col min-h-screen py-2 px-96 bg-white dark:bg-purple-137 overflow-x-hidden">
       <Head>
         <title>Juan Matus</title>
         <link rel="icon" href="/favicon.svg" />
@@ -29,9 +29,12 @@ export default function Home() {
           <p className="text-xl mb-5 dark:text-white font-sans">
             If you like what I do, feel free to join our community:
           </p>
-          <button className="p-3 rounded-md bg-blue-137 text-white font-semibold">
+          <a
+            href="/about"
+            className="button p-3 rounded-md bg-blue-137 text-white font-semibold"
+          >
             Join Here
-          </button>
+          </a>
         </div>
         <img src="/images/face.png" className="max-w-lg" />
       </main>
