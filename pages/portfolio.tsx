@@ -103,7 +103,7 @@ export default function portfolio() {
       title: "niudot",
       description: "Produced by niudot",
       companyLink: "https://niudot.com/",
-      imageSource: "/images/companies/quenca.png",
+      imageSource: "/images/companies/niudot.png",
       link: "https://niudot.com",
       icons: (
         <Fragment>
