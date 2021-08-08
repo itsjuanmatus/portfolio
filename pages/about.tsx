@@ -6,6 +6,8 @@ import SassIcon from "../components/frameworks/SassIcon";
 import NextIcon from "../components/frameworks/NextIcon";
 import FlureeIcon from "../components/frameworks/FlureeIcon";
 import TailwindIcon from "../components/frameworks/TailwindIcon";
+import JavaScriptIcon from "../components/frameworks/JavaScriptIcon";
+import CssIcon from "../components/frameworks/CssIcon";
 
 export default function about() {
   return (
@@ -81,6 +83,13 @@ export default function about() {
             </div>
 
             <div className="inline-flex items-center space-x-3">
+              <JavaScriptIcon styles="flex-1 w-10 fill-current text-purple-138 dark:text-gray-137 p-1" />
+              <h3 className="flex-1 text-xl font-thin text-purple-138 dark:text-white font-sans">
+                javascript
+              </h3>
+            </div>
+
+            <div className="inline-flex items-center space-x-3">
               <WordpressIcon styles="flex-1 w-10 fill-current text-purple-138 dark:text-gray-137 p-1" />
               <h3 className="flex-1 text-xl font-thin text-purple-138 dark:text-white font-sans">
                 wordpress
@@ -104,6 +113,13 @@ export default function about() {
               <FlureeIcon styles="flex-1 w-10 fill-current text-purple-138 dark:text-gray-137 p-1" />
               <h3 className="flex-1 text-xl font-thin text-purple-138 dark:text-white font-sans">
                 fluree
+              </h3>
+            </div>
+
+            <div className="inline-flex items-center space-x-3">
+              <CssIcon styles="flex-1 w-10 fill-current text-purple-138 dark:text-gray-137 p-1" />
+              <h3 className="flex-1 text-xl font-thin text-purple-138 dark:text-white font-sans">
+                css
               </h3>
             </div>
           </div>

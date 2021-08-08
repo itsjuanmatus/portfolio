@@ -26,18 +26,22 @@ export default function Home() {
             collaborated with.
           </p>
           <img src="/images/circle.svg" className="mb-5" />
-          <p className="text-xl mb-5 dark:text-white font-sans">
+          <p className="text-xl mb-10 dark:text-white font-sans">
             If you like what I do, feel free to join our community:
           </p>
           <a
-            href="/about"
-            className="button p-3 rounded-md bg-blue-137 text-white font-semibold"
+            href="https://www.youtube.com/c/JuanMatus/videos"
+            target="_blank"
+            className="button p-4 rounded-md bg-blue-137 text-white font-semibold"
           >
-            Join Here
+            Subscribe Here
           </a>
         </div>
         <div>
-          <img src="/images/face.png" className="hidden md:block md:max-w-sm lg:max-w-lg" />
+          <img
+            src="/images/face.png"
+            className="hidden md:block md:max-w-sm lg:max-w-lg"
+          />
         </div>
       </main>
 

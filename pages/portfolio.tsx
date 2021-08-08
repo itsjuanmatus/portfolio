@@ -5,141 +5,9 @@ import TypeScriptIcon from "../components/frameworks/TypeScriptIcon";
 import TailwindIcon from "../components/frameworks/TailwindIcon";
 import ProjectCard from "../components/ProjectCard";
 import NextIcon from "../components/frameworks/NextIcon";
+import Cards from "../components/CardsInfo";
 
 export default function portfolio() {
-  const Cards = [
-    {
-      title: "MD Furniture",
-      imageSource: "/images/companies/md-furniture.png",
-      link: "https://md-furniture.netlify.app/",
-      icons: (
-        <Fragment>
-          <ReactIcon styles="fill-current dark:text-white w-10" />
-          <NextIcon styles="fill-current dark:text-white w-10" />
-          <TypeScriptIcon styles="fill-current dark:text-white w-10" />
-          <TailwindIcon styles="fill-current dark:text-white w-10" />
-        </Fragment>
-      ),
-    },
-    {
-      title: "Perignosia",
-      imageSource: "/images/companies/perignosia.png",
-      link: "https://perignosia.io",
-      icons: (
-        <Fragment>
-          <ReactIcon styles="fill-current dark:text-white w-10" />
-          <NextIcon styles="fill-current dark:text-white w-10" />
-          <TypeScriptIcon styles="fill-current dark:text-white w-10" />
-          <TailwindIcon styles="fill-current dark:text-white w-10" />
-        </Fragment>
-      ),
-    },
-    {
-      title: "Fundación Costa Rica",
-      description: "Produced by niudot",
-      companyLink: "https://niudot.com/",
-      imageSource: "/images/companies/fundacioncostarica.png",
-      link: "https://fundacioncostarica.org/",
-      icons: (
-        <Fragment>
-          <ReactIcon styles="fill-current dark:text-white w-10" />
-          <TypeScriptIcon styles="fill-current dark:text-white w-10" />
-          <TailwindIcon styles="fill-current dark:text-white w-10" />
-        </Fragment>
-      ),
-    },
-    {
-      title: "Webster Academy",
-      description: "Produced by niudot",
-      companyLink: "https://niudot.com/",
-      imageSource: "/images/companies/webster-academy.png",
-      link: "https://webstercostarica.com/",
-      icons: (
-        <Fragment>
-          <ReactIcon styles="fill-current dark:text-white w-10" />
-          <TypeScriptIcon styles="fill-current dark:text-white w-10" />
-          <TailwindIcon styles="fill-current dark:text-white w-10" />
-        </Fragment>
-      ),
-    },
-    {
-      title: "Top Monkey Media",
-      description: "Produced by TMM",
-      companyLink: "https://topmonkeymedia.com/",
-      imageSource: "/images/companies/topmonkeymedia.png",
-      link: "https://topmonkeymedia.com/",
-      icons: (
-        <Fragment>
-          <ReactIcon styles="fill-current dark:text-white w-10" />
-          <TypeScriptIcon styles="fill-current dark:text-white w-10" />
-          <TailwindIcon styles="fill-current dark:text-white w-10" />
-        </Fragment>
-      ),
-    },
-    {
-      title: "Farmacia Centroamericana",
-      description: "Produced by TMM",
-      companyLink: "https://topmonkeymedia.com/",
-      imageSource: "/images/companies/farmaciacentroamericana.png",
-      link: "https://farmacentroamericana.com/",
-      icons: (
-        <Fragment>
-          <ReactIcon styles="fill-current dark:text-white w-10" />
-          <TypeScriptIcon styles="fill-current dark:text-white w-10" />
-          <TailwindIcon styles="fill-current dark:text-white w-10" />
-        </Fragment>
-      ),
-    },
-    {
-      title: "SIM Nicaragua",
-      description: "Produced by TMM",
-      companyLink: "https://topmonkeymedia.com/",
-      imageSource: "/images/companies/simnicaragua.png",
-      link: "https://quenca.com",
-      icons: (
-        <Fragment>
-          <ReactIcon styles="fill-current dark:text-white w-10" />
-        </Fragment>
-      ),
-    },
-    {
-      title: "niudot",
-      description: "Produced by niudot",
-      companyLink: "https://niudot.com/",
-      imageSource: "/images/companies/niudot.png",
-      link: "https://niudot.com",
-      icons: (
-        <Fragment>
-          <ReactIcon styles="fill-current dark:text-white w-10" />
-        </Fragment>
-      ),
-    },
-    {
-      title: "Quenca",
-      description: "Produced by niudot",
-      companyLink: "https://niudot.com/",
-      imageSource: "/images/companies/quenca.png",
-      link: "https://quenca.com",
-      icons: (
-        <Fragment>
-          <ReactIcon styles="fill-current dark:text-white w-10" />
-        </Fragment>
-      ),
-    },
-    {
-      title: "Ecotel",
-      description: "Produced by niudot",
-      companyLink: "https://niudot.com/",
-      imageSource: "/images/companies/ecotel.png",
-      link: "https://ecotelmanagua.com",
-      icons: (
-        <Fragment>
-          <ReactIcon styles="fill-current dark:text-white w-10" />
-        </Fragment>
-      ),
-    },
-  ];
-
   return (
     <div className="flex flex-col flex-wrap min-h-screen py-2  lg:px-96 bg-white dark:bg-purple-137 overflow-x-hidden">
       <Head>
@@ -148,6 +16,20 @@ export default function portfolio() {
       </Head>
 
       <main className="grid md:grid-cols-2 min-w-max mt-10 lg:mt-24 max-w-2xl m-auto">
+        <div className="col-span-2">
+          <h1 className="text-4xl font-bold mb-2 dark:text-white font-sans">
+            Portfolio
+          </h1>
+          <div className="max-w-md inline-flex items-center space-x-4 mb-5">
+            <p className="text-lg text-gray-600 dark:text-white font-sans ">
+              This site was made with{" "}
+            </p>
+            <ReactIcon styles="fill-current dark:text-white w-7" />
+            <NextIcon styles="fill-current dark:text-white w-7" />
+            <TypeScriptIcon styles="fill-current dark:text-white w-7" />
+            <TailwindIcon styles="fill-current dark:text-white w-7" />
+          </div>
+        </div>
         {Cards.map((card) => {
           const { title, imageSource, link, icons, description, companyLink } =
             card;
