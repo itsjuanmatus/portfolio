@@ -2,14 +2,14 @@ import Head from "next/head";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen py-2 px-96 bg-white dark:bg-purple-137 overflow-x-hidden">
+    <div className="flex flex-col flex-wrap min-h-screen py-2 px-10 lg:px-96 bg-white dark:bg-purple-137 overflow-x-hidden">
       <Head>
         <title>Juan Matus</title>
         <link rel="icon" href="/favicon.svg" />
       </Head>
 
-      <main className="grid grid-cols-1 md:grid-cols-2 min-w-max flex-1 mt-24">
-        <div className="max-w-lg">
+      <main className="grid grid-cols-1 md:grid-cols-2 min-w-full flex-1 mt-10 md:mt-24 md:gap-x-10 lg:gap-x-36">
+        <div className="min-w-full lg:max-w-lg lg:w-72">
           <h1 className="text-6xl font-bold mb-5 dark:text-white font-sans">
             Hi there!
           </h1>
@@ -36,7 +36,9 @@ export default function Home() {
             Join Here
           </a>
         </div>
-        <img src="/images/face.png" className="max-w-lg" />
+        <div>
+          <img src="/images/face.png" className="hidden md:block md:max-w-sm lg:max-w-lg" />
+        </div>
       </main>
 
       <footer className="flex items-center justify-center w-full h-24 ">

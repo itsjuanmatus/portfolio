@@ -1,12 +1,10 @@
-import React from "react";
-
 export default function TypeScriptIcon({ styles }) {
   return (
     <a href="https://www.typescriptlang.org/" target="_blank">
       <svg
         className={styles}
-        width="50"
-        height="50"
+        width="70"
+        height="70"
         viewBox="0 0 40 40"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function ReactIcon({ styles }) {
   return (
     <a href="https://reactjs.org/" target="_blank">

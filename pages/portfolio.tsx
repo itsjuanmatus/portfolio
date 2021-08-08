@@ -4,6 +4,7 @@ import ReactIcon from "../components/frameworks/ReactIcon";
 import TypeScriptIcon from "../components/frameworks/TypeScriptIcon";
 import TailwindIcon from "../components/frameworks/TailwindIcon";
 import ProjectCard from "../components/ProjectCard";
+import NextIcon from "../components/frameworks/NextIcon";
 
 export default function portfolio() {
   const Cards = [
@@ -14,6 +15,7 @@ export default function portfolio() {
       icons: (
         <Fragment>
           <ReactIcon styles="fill-current dark:text-white w-10" />
+          <NextIcon styles="fill-current dark:text-white w-10" />
           <TypeScriptIcon styles="fill-current dark:text-white w-10" />
           <TailwindIcon styles="fill-current dark:text-white w-10" />
         </Fragment>
@@ -26,6 +28,7 @@ export default function portfolio() {
       icons: (
         <Fragment>
           <ReactIcon styles="fill-current dark:text-white w-10" />
+          <NextIcon styles="fill-current dark:text-white w-10" />
           <TypeScriptIcon styles="fill-current dark:text-white w-10" />
           <TailwindIcon styles="fill-current dark:text-white w-10" />
         </Fragment>
@@ -138,13 +141,13 @@ export default function portfolio() {
   ];
 
   return (
-    <div className="grid grid-cols-1 min-h-screen py-2 px-80 bg-white dark:bg-purple-137 overflow-x-hidden">
+    <div className="flex flex-col flex-wrap min-h-screen py-2  lg:px-96 bg-white dark:bg-purple-137 overflow-x-hidden">
       <Head>
         <title>Portfolio - Juan Matus</title>
         <link rel="icon" href="/favicon.svg" />
       </Head>
 
-      <main className="grid lg:grid-cols-2 min-w-max mt-24 max-w-2xl m-auto">
+      <main className="grid md:grid-cols-2 min-w-max mt-10 lg:mt-24 max-w-2xl m-auto">
         {Cards.map((card) => {
           const { title, imageSource, link, icons, description, companyLink } =
             card;

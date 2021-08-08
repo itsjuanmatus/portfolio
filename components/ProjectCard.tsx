@@ -25,7 +25,7 @@ export default function ProjectCard({
   companyLink
 }: Props) {
   return (
-    <div className="bg-white dark:bg-transparent dark:border-purple-138 max-w-md max-h-full border border-gray-137 rounded-lg pb-6 m-4">
+    <div className="bg-white dark:bg-transparent dark:border-purple-138 max-w-xs xl:max-w-md max-h-full border border-gray-137 rounded-lg pb-6 m-2 md:m-4">
       <a href={link} target="_blank">
         <img
           src={imageSource}

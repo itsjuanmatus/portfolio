@@ -3,7 +3,7 @@ module.exports = {
   darkMode: "class",
   theme: {
     fontFamily: {
-      'sans': ["Roboto", "Helvetica", "sans-serif"],
+      sans: ["Roboto", "Helvetica", "sans-serif"],
     },
 
     extend: {
@@ -13,14 +13,19 @@ module.exports = {
         },
         purple: {
           137: "#090621",
-          138: "#383657"
+          138: "#383657",
         },
         gray: {
-          136: '#F3F3F3',
+          136: "#F3F3F3",
           137: "#E5E7EB",
           138: "#A8A8A8",
-          139: '#414141',
-        }
+          139: "#414141",
+          140: "#686868",
+        },
+      },
+      strokeWidth: {
+        3: "3",
+        4: "4",
       },
     },
   },
