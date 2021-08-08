@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
 export default function contact() {
+  const [state, setState] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    message: "",
+  });
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setState({
+      ...state,
+      [name]: value,
+    });
+  };
+  const handlePress = () => {
+    fetch("/api/send-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: state.name, email: state.email }),
+    });
+  };
+
   const router = useRouter();
   return (
     <div className="flex flex-col flex-wrap min-h-screen py-2 px-5 lg:px-96 bg-white dark:bg-purple-137 overflow-x-hidden">
@@ -20,25 +41,32 @@ export default function contact() {
             <input
               className="p-3 w-full bg-gray-136 dark:bg-transparent border dark:border-gray-137 dark:text-white dark:placeholder-gray-138 border-gray-138 placeholder-gray-139 text-black rounded-md"
               placeholder="First Name"
+              id="firstname"
+              onChange={handleChange}
             />
             <input
               className="p-3 w-full bg-gray-136 dark:bg-transparent border dark:border-gray-137 dark:text-white dark:placeholder-gray-138 border-gray-138 placeholder-gray-139 text-black rounded-md"
               placeholder="Last Name"
+              id="lastname"
+              onChange={handleChange}
             />
             <input
               className="p-3 w-full bg-gray-136 dark:bg-transparent border dark:border-gray-137 dark:text-white dark:placeholder-gray-138 border-gray-138 placeholder-gray-139 text-black rounded-md md:col-span-2"
               placeholder="Email"
+              id="email"
+              type="email"
+              onChange={handleChange}
             />
             <textarea
               className="p-3 w-full bg-gray-136 dark:bg-transparent border dark:border-gray-137 dark:text-white dark:placeholder-gray-138 border-gray-138 placeholder-gray-139 text-black rounded-md md:col-span-2 h-36"
               placeholder="Message"
+              id="message"
+              onChange={handleChange}
             />
             <button
               className="bg-blue-137 text-white font-bold min-w-max p-3 w-2 rounded-md"
               type="submit"
-              onClick={() => {
-                router.push("/conf");
-              }}
+              onClick={handlePress}
             >
               Submit Form
             </button>
