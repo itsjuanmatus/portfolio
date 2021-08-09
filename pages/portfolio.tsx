@@ -13,9 +13,10 @@ export default function portfolio() {
       <Head>
         <title>Portfolio - Juan Matus</title>
         <link rel="icon" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <main className="grid md:grid-cols-2 min-w-max mt-10 lg:mt-24 max-w-2xl m-auto">
+      <main className="grid grid-cols-1 md:grid-cols-2 min-w-max mt-10 lg:mt-24 max-w-2xl m-auto">
         <div className="col-span-2">
           <h1 className="text-4xl font-bold mb-2 dark:text-white font-sans">
             Portfolio

@@ -15,6 +15,7 @@ export default function about() {
       <Head>
         <title>About - Juan Matus</title>
         <link rel="icon" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
       <main className="grid grid-cols-1 w-auto flex-1 mt-10 lg:mt-24">
@@ -69,7 +70,7 @@ export default function about() {
           <h1 className="text-3xl font-bold mb-5 dark:text-white font-sans">
             What I master
           </h1>
-          <div className="grid md:grid-cols-2 max-w-max gap-x-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 max-w-max gap-x-16">
             <div className="inline-flex items-center space-x-3">
               <ReactIcon styles="flex-1 w-10 fill-current text-purple-138 dark:text-gray-137 p-1" />
               <h3 className="flex-1 text-xl font-thin text-purple-138 dark:text-white font-sans">

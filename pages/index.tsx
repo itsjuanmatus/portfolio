@@ -6,6 +6,7 @@ export default function Home() {
       <Head>
         <title>Juan Matus</title>
         <link rel="icon" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
       <main className="grid grid-cols-1 md:grid-cols-2 min-w-full flex-1 mt-10 md:mt-24 md:gap-x-10 lg:gap-x-36">
