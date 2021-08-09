@@ -22,13 +22,13 @@ const sendEmail = async ({ name, email }) => {
             }
           ],
           from: {
-            email: 'noreply@demo.com',
+            email: 'juanmatusg16@gmail.com',
             name: 'Test SendGrid'
           },
           content: [
             {
               type: 'text/html',
-              value: `Congratulations <b>${name}</b>, you just sent an email with sendGrid`
+              value: ''
             }
           ]
         })

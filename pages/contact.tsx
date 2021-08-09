@@ -3,28 +3,29 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 export default function contact() {
-  const [state, setState] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    message: "",
-  });
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setState({
-      ...state,
-      [name]: value,
-    });
-  };
-  const handlePress = () => {
-    fetch("/api/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name: state.name, email: state.email }),
-    });
-  };
 
   const router = useRouter();
+
+  async function handleOnSubmit(e) {
+    e.preventDefault();
+
+    const formData = {};
+
+    Array.from(e.currentTarget.elements).forEach((field:any) => {
+      if (!field.name) return;
+      formData[field.name] = field.value;
+    });
+    console.log(formData)
+
+    await fetch("/api/mail", {
+      method: "POST",
+      body: JSON.stringify(formData),
+    });
+
+    router.push({pathname: "/"})
+
+  }
+  
   return (
     <div className="flex flex-col flex-wrap min-h-screen py-2 px-5 lg:px-96 bg-white dark:bg-purple-137 overflow-x-hidden">
       <Head>
@@ -37,36 +38,38 @@ export default function contact() {
           <h1 className="text-4xl font-bold mb-5 dark:text-white font-sans">
             For business inquiries or collaborations
           </h1>
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-3 md:max-w-2xl max-h-full min-w-max">
+          <form
+            className="grid grid-cols-1 md:grid-cols-2 gap-3 md:max-w-2xl max-h-full min-w-max"
+            method="post"
+            onSubmit={handleOnSubmit}
+          >
             <input
               className="p-3 w-full bg-gray-136 dark:bg-transparent border dark:border-gray-137 dark:text-white dark:placeholder-gray-138 border-gray-138 placeholder-gray-139 text-black rounded-md"
               placeholder="First Name"
-              id="firstname"
-              onChange={handleChange}
+              name="firstname"
+              required
             />
             <input
               className="p-3 w-full bg-gray-136 dark:bg-transparent border dark:border-gray-137 dark:text-white dark:placeholder-gray-138 border-gray-138 placeholder-gray-139 text-black rounded-md"
               placeholder="Last Name"
-              id="lastname"
-              onChange={handleChange}
+              name="lastname"
+              required
             />
             <input
               className="p-3 w-full bg-gray-136 dark:bg-transparent border dark:border-gray-137 dark:text-white dark:placeholder-gray-138 border-gray-138 placeholder-gray-139 text-black rounded-md md:col-span-2"
               placeholder="Email"
-              id="email"
+              name="email"
               type="email"
-              onChange={handleChange}
+              required
             />
             <textarea
               className="p-3 w-full bg-gray-136 dark:bg-transparent border dark:border-gray-137 dark:text-white dark:placeholder-gray-138 border-gray-138 placeholder-gray-139 text-black rounded-md md:col-span-2 h-36"
               placeholder="Message"
-              id="message"
-              onChange={handleChange}
+              name="message"
+              required
             />
             <button
               className="bg-blue-137 text-white font-bold min-w-max p-3 w-2 rounded-md"
-              type="submit"
-              onClick={handlePress}
             >
               Submit Form
             </button>
