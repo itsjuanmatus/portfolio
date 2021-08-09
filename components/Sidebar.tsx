@@ -11,9 +11,9 @@ export default function Sidebar() {
   return (
     <>
       <aside className="hidden lg:block justify-center fixed bg-white dark:bg-purple-137 h-screen w-64 pt-10">
-        <Link href="/">
+        <a href="/">
           <img src="/favicon.svg" className="m-auto mb-24" />
-        </Link>
+        </a>
         <nav className="text-white text-base font-semibold pt-3 grid justify-items-center">
           <Link href="/">
             <a
