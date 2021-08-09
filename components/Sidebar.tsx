@@ -91,7 +91,9 @@ export default function Sidebar() {
 
       <div className="flex items-center justify-between lg:hidden w-full dark:bg-purple-137 px-4 pt-2">
         <div className="inline-flex min-h-full">
-          <img className="h-20 w-20 p-4" src="/favicon.svg" alt="logo" />
+          <Link href="/">
+            <img className="h-20 w-20 p-4" src="/favicon.svg" alt="logo" />
+          </Link>
           {colorTheme === "light" ? (
             <img
               onClick={() => setTheme("light")}
@@ -99,12 +101,10 @@ export default function Sidebar() {
               className="w-8 bottom-0 flex items-center justify-center"
             />
           ) : (
-            
             <img
               onClick={() => setTheme("dark")}
               src="/images/moon.svg"
               className="w-7 bottom-0 flex items-center justify-center z-20"
-              
             />
           )}
         </div>
