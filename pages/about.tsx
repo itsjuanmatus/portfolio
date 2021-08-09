@@ -20,13 +20,20 @@ export default function about() {
       <main className="grid grid-cols-1 w-auto flex-1 mt-10 lg:mt-24">
         <div className="max-w-2xl">
           <h1 className="text-3xl font-bold mb-5 dark:text-white font-sans">
-            about me
+            About me
           </h1>
           <p className="text-lg mb-5 text-gray-600 dark:text-white font-sans max-w-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-            libero lacus, laoreet eget nisl non, lobortis vehicula libero.
-            Maecenas ultrices turpis ac dictum congue. Integer a lobortis
-            lectus.
+            I am a highly motivated Full-Stack developer with a goal-driven work
+            ethic. Now working with Startups focused on Semantic Web
+            Technologies and Natural Language Processing, I see myself going
+            towards the world of AI. I am an active student at Codecademy,
+            keeping myself up to date with the latest and best technologies in
+            my field.
+          </p>
+          <p className="text-lg mb-5 text-gray-600 dark:text-white font-sans max-w-auto">
+            In my free time? I am a content creator on YouTube; I like sharing
+            what I learn with others, from how my programming workflow works to
+            the meaning of loneliness.
           </p>
           <div className="divide-y mb-5">
             <div></div>
@@ -34,13 +41,15 @@ export default function about() {
             <div></div>
           </div>
           <h1 className="text-3xl font-bold mb-5 dark:text-white font-sans">
-            juan matus
+            Juan Matus
           </h1>
           <p className="text-lg mb-5 text-gray-600 dark:text-white font-sans max-w-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-            libero lacus, laoreet eget nisl non, lobortis vehicula libero.
-            Maecenas ultrices turpis ac dictum congue. Integer a lobortis
-            lectus.{" "}
+            Since High School, I've had the opportunity to develop websites and
+            mobile applications for many companies as a freelancer. Also, I've
+            tried to create many businesses, and although I have not quite
+            succeeded in it, I'm proud of myself for trying. I have learned a
+            lot and got the opportunity to meet incredible and talented people
+            along the way.
           </p>
           <h1 className="text-3xl font-bold mb-3 dark:text-white font-sans">
             4+ <a className="text-lg">years of experience</a>
@@ -58,7 +67,7 @@ export default function about() {
             <div></div>
           </div>
           <h1 className="text-3xl font-bold mb-5 dark:text-white font-sans">
-            what i master
+            What I master
           </h1>
           <div className="grid md:grid-cols-2 max-w-max gap-x-16">
             <div className="inline-flex items-center space-x-3">
