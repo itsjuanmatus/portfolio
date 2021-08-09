@@ -96,13 +96,15 @@ export default function Sidebar() {
             <img
               onClick={() => setTheme("light")}
               src="/images/moon_filled.svg"
-              className="w-8 bottom-0 text-black flex items-center justify-center"
+              className="w-8 bottom-0 flex items-center justify-center"
             />
           ) : (
+            
             <img
               onClick={() => setTheme("dark")}
               src="/images/moon.svg"
-              className="w-7 bottom-0 text-black flex items-center justify-center"
+              className="w-7 bottom-0 flex items-center justify-center z-20"
+              
             />
           )}
         </div>
