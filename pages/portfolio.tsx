@@ -17,18 +17,18 @@ export default function portfolio() {
       </Head>
 
       <main className="grid grid-cols-1 md:grid-cols-2 min-w-max mt-10 lg:mt-24 max-w-2xl m-auto">
-        <div className="col-span-2">
-          <h1 className="text-4xl font-bold mb-2 dark:text-white font-sans">
+        <div className="col-span-1 md:col-span-2">
+          <h1 className="text-4xl font-bold md:mb-2 dark:text-white font-sans">
             Portfolio
           </h1>
-          <div className="max-w-md inline-flex items-center space-x-4 mb-5">
-            <p className="text-lg text-gray-600 dark:text-white font-sans ">
+          <div className="inline-flex items-center space-x-4 mb-5 max-w-md">
+            <p className="text-md text-gray-600 dark:text-white font-sans ">
               This site was made with{" "}
             </p>
-            <ReactIcon styles="fill-current dark:text-white w-7" />
-            <NextIcon styles="fill-current dark:text-white w-7" />
-            <TypeScriptIcon styles="fill-current dark:text-white w-7" />
-            <TailwindIcon styles="fill-current dark:text-white w-7" />
+            <ReactIcon styles="fill-current dark:text-white w-5 md:w-7" />
+            <NextIcon styles="fill-current dark:text-white w-5 md:w-7" />
+            <TypeScriptIcon styles="fill-current dark:text-white w-5 md:w-7" />
+            <TailwindIcon styles="fill-current dark:text-white w-5 md:w-7" />
           </div>
         </div>
         {Cards.map((card) => {

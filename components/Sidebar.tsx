@@ -97,7 +97,6 @@ export default function Sidebar() {
               onClick={() => setTheme("light")}
               xmlns="http://www.w3.org/2000/svg"
               className="w-7 upgrade-btn bottom-0  text-white flex items-center justify-center m-auto"
-              fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
@@ -169,22 +168,22 @@ export default function Sidebar() {
               className="px-2 pt-2 pb-3 space-y-1 sm:px-3 dark:bg-purple-137"
             >
               <Link href="/">
-                <a className="text-purple-137 dark:text-white font-semibold block px-3 py-2 rounded-md text-base">
+                <a  onClick={() => setIsOpen(!isOpen)} className="text-purple-137 dark:text-white font-semibold block px-3 py-2 rounded-md text-base">
                   Home
                 </a>
               </Link>
               <Link href="/about">
-                <a className="text-purple-137 dark:text-white font-semibold block px-3 py-2 rounded-md text-base">
+                <a onClick={() => setIsOpen(!isOpen)}  className="text-purple-137 dark:text-white font-semibold block px-3 py-2 rounded-md text-base">
                   About
                 </a>
               </Link>
               <Link href="/portfolio">
-                <a className="text-purple-137 dark:text-white font-semibold block px-3 py-2 rounded-md text-base">
+                <a onClick={() => setIsOpen(!isOpen)} className="text-purple-137 dark:text-white font-semibold block px-3 py-2 rounded-md text-base">
                   Portfolio
                 </a>
               </Link>
               <Link href="/contact">
-                <a className="text-purple-137 dark:text-white font-semibold block px-3 py-2 rounded-md text-base">
+                <a onClick={() => setIsOpen(!isOpen)} className="text-purple-137 dark:text-white font-semibold block px-3 py-2 rounded-md text-base">
                   Contact
                 </a>
               </Link>

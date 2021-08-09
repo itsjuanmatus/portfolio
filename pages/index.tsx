@@ -9,7 +9,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <main className="grid grid-cols-1 md:grid-cols-2 min-w-full flex-1 mt-10 md:mt-24 md:gap-x-10 lg:gap-x-36">
+      <main className="grid grid-cols-1 mb-16 md:grid-cols-2 min-w-full flex-1 mt-5 md:mt-24 md:gap-x-10 lg:gap-x-36">
         <div className="min-w-full lg:max-w-lg lg:w-72">
           <h1 className="text-6xl font-bold mb-5 dark:text-white font-sans">
             Hi there!

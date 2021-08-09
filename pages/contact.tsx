@@ -35,7 +35,7 @@ export default function contact() {
       </Head>
 
       <main className="grid grid-cols-1 md:grid-cols-2 min-w-max flex-1 mt-10 md:mt-24 justify-center">
-        <div className="max-w-sm md:max-w-lg">
+        <div className="max-w-xs md:max-w-xl">
           <h1 className="text-4xl font-bold mb-5 dark:text-white font-sans">
             For business inquiries or collaborations
           </h1>
