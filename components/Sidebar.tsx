@@ -90,13 +90,13 @@ export default function Sidebar() {
       {/** Mobile Nav Bar */}
 
       <div className="flex items-center justify-between lg:hidden w-full dark:bg-purple-137 px-4 pt-2">
-        <div className="inline-flex">
+        <div className="inline-flex min-h-full">
           <img className="h-20 w-20 p-4" src="/favicon.svg" alt="logo" />
           {colorTheme === "light" ? (
             <svg
               onClick={() => setTheme("light")}
               xmlns="http://www.w3.org/2000/svg"
-              className="w-7 upgrade-btn bottom-0  text-white flex items-center justify-center m-auto"
+              className="w-7 bottom-0  text-white flex items-center justify-center"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
@@ -111,7 +111,7 @@ export default function Sidebar() {
             <img
               onClick={() => setTheme("dark")}
               src="/images/moon.svg"
-              className="w-7 upgrade-btn bottom-0  text-black flex items-center justify-center m-auto"
+              className="w-7 bottom-0 text-black flex items-center justify-center"
             />
           )}
         </div>
@@ -168,22 +168,34 @@ export default function Sidebar() {
               className="px-2 pt-2 pb-3 space-y-1 sm:px-3 dark:bg-purple-137"
             >
               <Link href="/">
-                <a  onClick={() => setIsOpen(!isOpen)} className="text-purple-137 dark:text-white font-semibold block px-3 py-2 rounded-md text-base">
+                <a
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="text-purple-137 dark:text-white font-semibold block px-3 py-2 rounded-md text-base"
+                >
                   Home
                 </a>
               </Link>
               <Link href="/about">
-                <a onClick={() => setIsOpen(!isOpen)}  className="text-purple-137 dark:text-white font-semibold block px-3 py-2 rounded-md text-base">
+                <a
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="text-purple-137 dark:text-white font-semibold block px-3 py-2 rounded-md text-base"
+                >
                   About
                 </a>
               </Link>
               <Link href="/portfolio">
-                <a onClick={() => setIsOpen(!isOpen)} className="text-purple-137 dark:text-white font-semibold block px-3 py-2 rounded-md text-base">
+                <a
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="text-purple-137 dark:text-white font-semibold block px-3 py-2 rounded-md text-base"
+                >
                   Portfolio
                 </a>
               </Link>
               <Link href="/contact">
-                <a onClick={() => setIsOpen(!isOpen)} className="text-purple-137 dark:text-white font-semibold block px-3 py-2 rounded-md text-base">
+                <a
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="text-purple-137 dark:text-white font-semibold block px-3 py-2 rounded-md text-base"
+                >
                   Contact
                 </a>
               </Link>
