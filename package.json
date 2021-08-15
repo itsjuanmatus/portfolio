@@ -10,7 +10,8 @@
     "@sendgrid/mail": "^7.4.5",
     "next": "latest",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-lazyload": "^3.2.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.15",
