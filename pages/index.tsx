@@ -10,7 +10,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:title" content="Juan Matus" />
         <meta property="og:description" content="Frontend Developer" />
-        <meta name="og:image" content={"../public/images/logo.png"} />
+        <meta
+          name="og:image"
+          content="..public/images/logo.png"
+          key="ogimage"
+        />
       </Head>
 
       <main className="grid grid-cols-1 mb-16 md:grid-cols-2 min-w-full flex-1 mt-5 md:mt-24 md:gap-x-10 lg:gap-x-36">
