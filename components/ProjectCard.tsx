@@ -1,8 +1,4 @@
 import React from "react";
-import ReactIcon from "../components/frameworks/ReactIcon";
-import TypeScriptIcon from "../components/frameworks/TypeScriptIcon";
-import TailwindIcon from "../components/frameworks/TailwindIcon";
-import LazyLoad from "react-lazyload";
 
 interface Props {
   imageSource: string;
@@ -28,13 +24,11 @@ export default function ProjectCard({
   return (
     <div className="bg-white dark:bg-transparent dark:border-purple-138 max-w-xs xl:max-w-md max-h-full border border-gray-137 rounded-lg pb-6 m-2 md:m-4">
       <a href={link} target="_blank">
-        <LazyLoad>
         <img
           src={imageSource}
           alt={imageAlt}
           className={`p-4 pb-6 w-full block` + imageStyles}
         />
-        </LazyLoad>
       </a>
       
       <a href={link} target="_blank">

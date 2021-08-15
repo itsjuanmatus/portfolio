@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -11,9 +12,22 @@ export default function Home() {
 
       <main className="grid grid-cols-1 mb-16 md:grid-cols-2 min-w-full flex-1 mt-5 md:mt-24 md:gap-x-10 lg:gap-x-36">
         <div className="min-w-full lg:max-w-lg lg:w-72">
-          <h1 className="text-6xl font-bold mb-5 dark:text-white font-sans">
-            Hi there!
-          </h1>
+          <motion.li animate="visible" initial="hidden" variants={{
+            hidden: {
+              scale: .8,
+              opacity: 0
+            }, visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                delay: .3
+              }
+            }
+          }} >
+            <h1 className="text-6xl font-bold mb-5 dark:text-white font-sans">
+              Hi there!
+            </h1>
+          </motion.li>
           <h3 className="text-3xl font-bold mb-5 dark:text-white font-sans">
             Thank you for being here!
           </h3>

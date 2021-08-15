@@ -8,10 +8,10 @@
   "dependencies": {
     "@headlessui/react": "^1.4.0",
     "@sendgrid/mail": "^7.4.5",
-    "next": "latest",
+    "framer-motion": "^4.1.17",
+    "next": "^11.1.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-lazyload": "^3.2.0"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@types/react": "^17.0.15",

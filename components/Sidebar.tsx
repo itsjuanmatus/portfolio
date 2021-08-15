@@ -3,6 +3,7 @@ import Link from "next/link";
 import useDarkMode from "./useDarkMode";
 import { useState } from "react";
 import { Transition } from "@headlessui/react";
+import { motion } from "framer-motion";
 
 export default function Sidebar() {
   const router = useRouter();
@@ -12,7 +13,13 @@ export default function Sidebar() {
     <>
       <aside className="hidden lg:block justify-center fixed bg-white dark:bg-purple-137 h-screen w-64 pt-10">
         <a href="/">
-          <img src="/favicon.svg" className="m-auto mb-24" />
+          <motion.li
+            animate="active"
+            whileHover={{ rotate: 360 }}
+            whileTap={{ scale: 1.2 }}
+          >
+            <img src="/favicon.svg" className="m-auto mb-24" />
+          </motion.li>
         </a>
         <nav className="text-white text-base font-semibold pt-3 grid justify-items-center">
           <Link href="/">
@@ -92,7 +99,12 @@ export default function Sidebar() {
       <div className="flex items-center justify-between lg:hidden w-full dark:bg-purple-137 px-4 pt-2">
         <div className="inline-flex min-h-full">
           <Link href="/">
-            <img className="h-20 w-20 p-4" src="/favicon.svg" alt="logo" />
+            <motion.li
+              animate="active"
+              whileTap={{ scale: 1.4 }}
+            >
+              <img className="h-20 w-20 p-4" src="/favicon.svg" alt="logo" />
+            </motion.li>
           </Link>
           {colorTheme === "light" ? (
             <img
@@ -117,17 +129,19 @@ export default function Sidebar() {
         >
           <span className="sr-only">Open main menu</span>
           {!isOpen ? (
-            <svg
-              className="stroke-current stroke-3 fill-current text-purple-137 dark:text-gray-137"
-              width="36"
-              height="24"
-              viewBox="0 0 36 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line x1="2.5" y1="1.5" x2="21.5" y2="1.5" />
-              <line x1="1.5" y1="11.5" x2="34.5" y2="11.5" />
-              <line x1="10.5" y1="22.5" x2="29.5" y2="22.5" />
-            </svg>
+            <motion.li style={{ originX: 0.5 }}>
+              <svg
+                className="stroke-current stroke-3 fill-current text-purple-137 dark:text-gray-137"
+                width="36"
+                height="24"
+                viewBox="0 0 36 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line x1="2.5" y1="1.5" x2="21.5" y2="1.5" />
+                <line x1="1.5" y1="11.5" x2="34.5" y2="11.5" />
+                <line x1="10.5" y1="22.5" x2="29.5" y2="22.5" />
+              </svg>
+            </motion.li>
           ) : (
             <svg
               className="block h-6 w-6 stroke-current stroke-3 fill-current text-purple-137 dark:text-gray-137"
