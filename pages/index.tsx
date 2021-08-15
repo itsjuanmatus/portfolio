@@ -8,6 +8,9 @@ export default function Home() {
         <title>Juan Matus</title>
         <link rel="icon" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Juan Matus" />
+        <meta property="og:description" content="Frontend Developer" />
+        <meta name="og:image" content={"./public/images/favicon.svg"} />
       </Head>
 
       <main className="grid grid-cols-1 mb-16 md:grid-cols-2 min-w-full flex-1 mt-5 md:mt-24 md:gap-x-10 lg:gap-x-36">
@@ -58,7 +61,7 @@ export default function Home() {
               collaborated with.
             </p>
           </motion.div>
-          <motion.div whileHover={{ x: 350 }} transition={{duration: 1}}>
+          <motion.div whileHover={{ x: 350 }} transition={{ duration: 1 }}>
             <img src="/images/circle.svg" className="mb-5" />
           </motion.div>
 
