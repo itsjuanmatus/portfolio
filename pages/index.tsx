@@ -24,7 +24,7 @@ export default function Home() {
                 scale: 1,
                 opacity: 1,
                 transition: {
-                  delay: 0.3,
+                  delay: 0.2,
                 },
               },
             }}
@@ -34,7 +34,7 @@ export default function Home() {
             </h1>
           </motion.div>
           <motion.div
-            initial={{x: -100}}
+            initial={{ x: -100 }}
             animate={{ x: 0 }}
             transition={{ ease: "easeOut", duration: 1 }}
           >
@@ -47,14 +47,30 @@ export default function Home() {
             </p>
           </motion.div>
           <img src="/images/line.svg" className="mb-5" />
-          <p className="text-xl mb-5 dark:text-white font-sans">
-            Here you’ll find many of the work I’ve done and projects I’ve
-            collaborated with.
-          </p>
-          <img src="/images/circle.svg" className="mb-5" />
-          <p className="text-xl mb-10 dark:text-white font-sans">
-            If you like what I do, feel free to join our community:
-          </p>
+
+          <motion.div
+            initial={{ x: -100 }}
+            animate={{ x: 0 }}
+            transition={{ ease: "easeOut", duration: 1 }}
+          >
+            <p className="text-xl mb-5 dark:text-white font-sans">
+              Here you’ll find many of the work I’ve done and projects I’ve
+              collaborated with.
+            </p>
+          </motion.div>
+          <motion.div whileHover={{ x: 350 }} transition={{duration: 1}}>
+            <img src="/images/circle.svg" className="mb-5" />
+          </motion.div>
+
+          <motion.div
+            initial={{ x: 100 }}
+            animate={{ x: 0 }}
+            transition={{ ease: "easeOut", duration: 1 }}
+          >
+            <p className="text-xl mb-10 dark:text-white font-sans">
+              If you like what I do, feel free to join our community:
+            </p>
+          </motion.div>
           <a
             href="https://www.youtube.com/c/JuanMatus/videos"
             target="_blank"

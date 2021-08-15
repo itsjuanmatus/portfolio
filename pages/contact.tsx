@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 export default function contact() {
-
   const router = useRouter();
 
   async function handleOnSubmit(e) {
@@ -11,21 +11,20 @@ export default function contact() {
 
     const formData = {};
 
-    Array.from(e.currentTarget.elements).forEach((field:any) => {
+    Array.from(e.currentTarget.elements).forEach((field: any) => {
       if (!field.name) return;
       formData[field.name] = field.value;
     });
-    console.log(formData)
+    console.log(formData);
 
     await fetch("/api/mail", {
       method: "POST",
       body: JSON.stringify(formData),
     });
 
-    router.push({pathname: "/"})
-
+    router.push({ pathname: "/" });
   }
-  
+
   return (
     <div className="flex flex-col flex-wrap min-h-screen py-2 px-5 lg:px-96 bg-white dark:bg-purple-137 overflow-x-hidden">
       <Head>
@@ -36,9 +35,15 @@ export default function contact() {
 
       <main className="grid grid-cols-1 md:grid-cols-2 min-w-max flex-1 mt-10 md:mt-24 justify-center">
         <div className="max-w-xs md:max-w-xl">
-          <h1 className="text-4xl font-bold mb-5 dark:text-white font-sans">
-            For business inquiries or collaborations
-          </h1>
+          <motion.div
+            initial={{ x: 100 }}
+            animate={{ x: 0 }}
+            transition={{ ease: "easeOut", duration: 1 }}
+          >
+            <h1 className="text-4xl font-bold mb-5 dark:text-white font-sans">
+              For business inquiries or collaborations
+            </h1>
+          </motion.div>
           <form
             className="grid grid-cols-1 md:grid-cols-2 gap-3 md:max-w-2xl max-h-full min-w-max"
             method="post"
@@ -69,9 +74,7 @@ export default function contact() {
               name="message"
               required
             />
-            <button
-              className="bg-blue-137 text-white font-bold min-w-max p-3 w-2 rounded-md"
-            >
+            <button className="bg-blue-137 text-white font-bold min-w-max p-3 w-2 rounded-md">
               Submit Form
             </button>
           </form>

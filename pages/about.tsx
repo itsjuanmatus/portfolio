@@ -8,6 +8,7 @@ import FlureeIcon from "../components/frameworks/FlureeIcon";
 import TailwindIcon from "../components/frameworks/TailwindIcon";
 import JavaScriptIcon from "../components/frameworks/JavaScriptIcon";
 import CssIcon from "../components/frameworks/CssIcon";
+import { motion } from "framer-motion";
 
 export default function about() {
   return (
@@ -20,48 +21,60 @@ export default function about() {
 
       <main className="grid grid-cols-1 w-auto flex-1 mt-10 lg:mt-24">
         <div className="max-w-2xl">
-          <h1 className="text-3xl font-bold mb-5 dark:text-white font-sans">
-            About me
-          </h1>
-          <p className="text-lg mb-5 text-gray-600 dark:text-white font-sans max-w-auto">
-            I am a highly motivated Full-Stack developer with a goal-driven work
-            ethic. Now working with Startups focused on Semantic Web
-            Technologies and Natural Language Processing, I see myself going
-            towards the world of AI. I am an active student at Codecademy,
-            keeping myself up to date with the latest and best technologies in
-            my field.
-          </p>
-          <p className="text-lg mb-5 text-gray-600 dark:text-white font-sans max-w-auto">
-            In my free time? I am a content creator on YouTube; I like sharing
-            what I learn with others, from how my programming workflow works to
-            the meaning of loneliness.
-          </p>
+          <motion.div
+            initial={{ x: -100 }}
+            animate={{ x: 0 }}
+            transition={{ ease: "easeOut", duration: 1 }}
+          >
+            <h1 className="text-3xl font-bold mb-5 dark:text-white font-sans">
+              About me
+            </h1>
+            <p className="text-lg mb-5 text-gray-600 dark:text-white font-sans max-w-auto">
+              I am a highly motivated Full-Stack developer with a goal-driven
+              work ethic. Now working with Startups focused on Semantic Web
+              Technologies and Natural Language Processing, I see myself going
+              towards the world of AI. I am an active student at Codecademy,
+              keeping myself up to date with the latest and best technologies in
+              my field.
+            </p>
+
+            <p className="text-lg mb-5 text-gray-600 dark:text-white font-sans max-w-auto">
+              In my free time? I am a content creator on YouTube; I like sharing
+              what I learn with others, from how my programming workflow works
+              to the meaning of loneliness.
+            </p>
+          </motion.div>
           <div className="divide-y mb-5">
             <div></div>
             <div></div>
             <div></div>
           </div>
-          <h1 className="text-3xl font-bold mb-5 dark:text-white font-sans">
-            Juan Matus
-          </h1>
-          <p className="text-lg mb-5 text-gray-600 dark:text-white font-sans max-w-auto">
-            Since High School, I've had the opportunity to develop websites and
-            mobile applications for many companies as a freelancer. Also, I've
-            tried to create many businesses, and although I have not quite
-            succeeded in it, I'm proud of myself for trying. I have learned a
-            lot and got the opportunity to meet incredible and talented people
-            along the way.
-          </p>
-          <h1 className="text-3xl font-bold mb-3 dark:text-white font-sans">
-            4+ <a className="text-lg">years of experience</a>
-          </h1>
-          <h1 className="text-3xl font-bold mb-3 dark:text-white font-sans">
-            3+ <a className="text-lg">failed startups</a>
-          </h1>
-          <h1 className="text-3xl font-bold mb-5 dark:text-white font-sans">
-            8+ <a className="text-lg">company worked</a>
-          </h1>
-
+          <motion.div
+            initial={{ x: 100 }}
+            animate={{ x: 0 }}
+            transition={{ ease: "easeOut", duration: 1 }}
+          >
+            <h1 className="text-3xl font-bold mb-5 dark:text-white font-sans">
+              Juan Matus
+            </h1>
+            <p className="text-lg mb-5 text-gray-600 dark:text-white font-sans max-w-auto">
+              Since High School, I've had the opportunity to develop websites
+              and mobile applications for many companies as a freelancer. Also,
+              I've tried to create many businesses, and although I have not
+              quite succeeded in it, I'm proud of myself for trying. I have
+              learned a lot and got the opportunity to meet incredible and
+              talented people along the way.
+            </p>
+            <h1 className="text-3xl font-bold mb-3 dark:text-white font-sans">
+              4+ <a className="text-lg">years of experience</a>
+            </h1>
+            <h1 className="text-3xl font-bold mb-3 dark:text-white font-sans">
+              3+ <a className="text-lg">failed startups</a>
+            </h1>
+            <h1 className="text-3xl font-bold mb-5 dark:text-white font-sans">
+              8+ <a className="text-lg">company worked</a>
+            </h1>
+          </motion.div>
           <div className="divide-y mb-5">
             <div></div>
             <div></div>
