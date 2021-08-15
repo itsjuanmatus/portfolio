@@ -12,29 +12,40 @@ export default function Home() {
 
       <main className="grid grid-cols-1 mb-16 md:grid-cols-2 min-w-full flex-1 mt-5 md:mt-24 md:gap-x-10 lg:gap-x-36">
         <div className="min-w-full lg:max-w-lg lg:w-72">
-          <motion.li animate="visible" initial="hidden" variants={{
-            hidden: {
-              scale: .8,
-              opacity: 0
-            }, visible: {
-              scale: 1,
-              opacity: 1,
-              transition: {
-                delay: .3
-              }
-            }
-          }} >
+          <motion.div
+            animate="visible"
+            initial="hidden"
+            variants={{
+              hidden: {
+                scale: 0.8,
+                opacity: 0,
+              },
+              visible: {
+                scale: 1,
+                opacity: 1,
+                transition: {
+                  delay: 0.3,
+                },
+              },
+            }}
+          >
             <h1 className="text-6xl font-bold mb-5 dark:text-white font-sans">
               Hi there!
             </h1>
-          </motion.li>
-          <h3 className="text-3xl font-bold mb-5 dark:text-white font-sans">
-            Thank you for being here!
-          </h3>
-          <p className="text-xl mb-5 dark:text-white font-sans">
-            I’m a <a className="font-semibold">Software Developer</a> and{" "}
-            <a className="font-semibold">Youtube Content Creator.</a>
-          </p>
+          </motion.div>
+          <motion.div
+            initial={{x: -100}}
+            animate={{ x: 0 }}
+            transition={{ ease: "easeOut", duration: 1 }}
+          >
+            <h3 className="text-3xl font-bold mb-5 dark:text-white font-sans">
+              Thank you for being here!
+            </h3>
+            <p className="text-xl mb-5 dark:text-white font-sans">
+              I’m a <a className="font-semibold">Software Developer</a> and{" "}
+              <a className="font-semibold">Youtube Content Creator.</a>
+            </p>
+          </motion.div>
           <img src="/images/line.svg" className="mb-5" />
           <p className="text-xl mb-5 dark:text-white font-sans">
             Here you’ll find many of the work I’ve done and projects I’ve

@@ -97,21 +97,25 @@ export default function Sidebar() {
       {/** Mobile Nav Bar */}
 
       <div className="flex items-center justify-between lg:hidden w-full dark:bg-purple-137 px-4 pt-2">
-        <div className="inline-flex min-h-full">
+        <div className="inline-flex items-center min-h-full">
           <Link href="/">
-            <motion.li
-              animate="active"
-              whileTap={{ scale: 1.4 }}
-            >
+            <motion.div animate="active" whileTap={{ scale: 1.4, rotate: 900}}>
               <img className="h-20 w-20 p-4" src="/favicon.svg" alt="logo" />
-            </motion.li>
+            </motion.div>
           </Link>
           {colorTheme === "light" ? (
-            <img
+            <svg
               onClick={() => setTheme("light")}
-              src="/images/moon_filled.svg"
+              viewBox="0 0 29 29"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
               className="w-8 bottom-0 flex items-center justify-center"
-            />
+            >
+              <path
+                d="M25.375 15.4546C25.1849 17.5114 24.413 19.4716 23.1496 21.1057C21.8861 22.7398 20.1834 23.9803 18.2406 24.6821C16.2979 25.3838 14.1955 25.5177 12.1794 25.0682C10.1633 24.6187 8.31695 23.6042 6.85636 22.1436C5.39576 20.683 4.38135 18.8367 3.93181 16.8206C3.48227 14.8045 3.6162 12.7021 4.31793 10.7594C5.01967 8.81662 6.26017 7.1139 7.8943 5.85045C9.52843 4.587 11.4886 3.81508 13.5454 3.625C12.3412 5.25416 11.7617 7.26142 11.9124 9.28171C12.0631 11.302 12.9338 13.2011 14.3664 14.6336C15.7989 16.0662 17.698 16.9369 19.7183 17.0876C21.7386 17.2383 23.7458 16.6588 25.375 15.4546Z"
+                fill="white"
+              />
+            </svg>
           ) : (
             <img
               onClick={() => setTheme("dark")}
@@ -129,7 +133,13 @@ export default function Sidebar() {
         >
           <span className="sr-only">Open main menu</span>
           {!isOpen ? (
-            <motion.li style={{ originX: 0.5 }}>
+            <motion.div animate={{
+              originX: 54,
+              x: 0,
+              y: 0,
+              scale: 1,
+              rotate: 0,
+            }} >
               <svg
                 className="stroke-current stroke-3 fill-current text-purple-137 dark:text-gray-137"
                 width="36"
@@ -141,7 +151,7 @@ export default function Sidebar() {
                 <line x1="1.5" y1="11.5" x2="34.5" y2="11.5" />
                 <line x1="10.5" y1="22.5" x2="29.5" y2="22.5" />
               </svg>
-            </motion.li>
+            </motion.div>
           ) : (
             <svg
               className="block h-6 w-6 stroke-current stroke-3 fill-current text-purple-137 dark:text-gray-137"
