@@ -45,7 +45,7 @@ export default function work () {
   }
 
   return (
-    <div className="flex flex-col flex-wrap min-h-screen py-2 px-5 md:px-10 lg:ml-32 bg-white dark:bg-gray-background overflow-x-hidden">
+    <div className="flex flex-col flex-wrap min-h-screen py-2 px-52 md:px-10 lg:ml-32 bg-white dark:bg-gray-background overflow-x-hidden">
       <Head>
         <title>Juan Matus</title>
         <link rel='icon' href='/favicon.svg' />
