@@ -48,7 +48,7 @@ export default function Sidebar () {
               About
             </a>
           </Link>
-          <Link href='/portfolio'>
+          <Link href='/work'>
             <a
               className={`flex items-center dark:text-white text-black py-4 hover:text-blue-300 ${
                 router.pathname == '/portfolio'
@@ -56,7 +56,7 @@ export default function Sidebar () {
                   : ''
               }`}
             >
-              Portfolio
+              Work
             </a>
           </Link>
 
@@ -240,12 +240,12 @@ export default function Sidebar () {
                   About
                 </a>
               </Link>
-              <Link href='/portfolio'>
+              <Link href='/work'>
                 <a
                   onClick={() => setIsOpen(!isOpen)}
                   className='text-gray-background dark:text-white font-semibold block px-3 py-2 rounded-md text-base'
                 >
-                  Portfolio
+                  Work
                 </a>
               </Link>
               <Link href='/contact'>

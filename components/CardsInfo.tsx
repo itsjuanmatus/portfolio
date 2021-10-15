@@ -24,19 +24,6 @@ const Cards = [
     ),
   },
   {
-    title: "Perignosia",
-    imageSource: "/images/companies/perignosia.png",
-    link: "https://perignosia.io",
-    icons: (
-      <Fragment>
-        <ReactIcon styles="fill-current dark:text-white w-10" />
-        <NextIcon styles="fill-current dark:text-white w-10" />
-        <TypeScriptIcon styles="fill-current dark:text-white w-10" />
-        <TailwindIcon styles="fill-current dark:text-white w-10" />
-      </Fragment>
-    ),
-  },
-  {
     title: "Fundación Costa Rica",
     description: "Produced by niudot",
     companyLink: "https://niudot.com/",
