@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 function BulletTriangle ({ text }) {
   return (
-    <div className='inline-flex items-start space-x-4'>
+    <div className='inline-flex items-start space-x-4 w-full min-w-max'>
       <svg
         width='18'
         height='17'
@@ -18,7 +18,7 @@ function BulletTriangle ({ text }) {
           fill='#3A72E4'
         />
       </svg>
-      <p className='dark:text-gray-400'>{text}</p>
+      <p className='dark:text-gray-400 max-w-xs md:max-w-max'>{text}</p>
     </div>
   )
 }
