@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 export default function portfolio() {
   return (
-    <div className="flex flex-col flex-wrap min-h-screen py-2  lg:px-96 bg-white dark:bg-purple-137 overflow-x-hidden">
+    <div className="flex flex-col flex-wrap min-h-screen py-2  lg:px-96 bg-white dark:bg-gray-background overflow-x-hidden">
       <Head>
         <title>Portfolio - Juan Matus</title>
         <link rel="icon" href="/favicon.svg" />

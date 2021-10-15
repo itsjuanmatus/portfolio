@@ -21,6 +21,7 @@ module.exports = {
           138: "#A8A8A8",
           139: "#414141",
           140: "#686868",
+          background: "#111111"
         },
       },
       strokeWidth: {

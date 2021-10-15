@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-wrap min-h-screen py-2 px-10 lg:px-96 bg-white dark:bg-purple-137 overflow-x-hidden">
+    <div className="flex flex-col flex-wrap min-h-screen py-2 px-10 lg:px-96 bg-white dark:bg-gray-background overflow-x-hidden">
       <Head>
         <title>Juan Matus</title>
         <link rel="icon" href="/favicon.svg" />
@@ -36,7 +36,7 @@ export default function Home() {
               },
             }}
           >
-            <h1 className="text-6xl font-bold mb-5 dark:text-white font-sans">
+            <h1 className="text-7xl font-bold mb-5 dark:text-white font-sans">
               Hi there!
             </h1>
           </motion.div>
@@ -48,8 +48,8 @@ export default function Home() {
             <h3 className="text-3xl font-bold mb-5 dark:text-white font-sans">
               Thank you for being here!
             </h3>
-            <p className="text-xl mb-5 dark:text-white font-sans">
-              I’m a <a className="font-semibold">Software Developer</a> and{" "}
+            <p className="text-lg mb-5 dark:text-white font-sans">
+              I’m a <a className="font-semibold">Full Stack Web Developer</a> and{" "}
               <a className="font-semibold">Youtube Content Creator.</a>
             </p>
           </motion.div>
@@ -60,7 +60,7 @@ export default function Home() {
             animate={{ x: 0 }}
             transition={{ ease: "easeOut", duration: 1 }}
           >
-            <p className="text-xl mb-5 dark:text-white font-sans">
+            <p className="text-lg mb-5 dark:text-white font-sans">
               Here you’ll find many of the work I’ve done and projects I’ve
               collaborated with.
             </p>
@@ -74,7 +74,7 @@ export default function Home() {
             animate={{ x: 0 }}
             transition={{ ease: "easeOut", duration: 1 }}
           >
-            <p className="text-xl mb-10 dark:text-white font-sans">
+            <p className="text-lg mb-10 dark:text-white font-sans">
               If you like what I do, feel free to join our community:
             </p>
           </motion.div>
