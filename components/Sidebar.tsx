@@ -15,7 +15,7 @@ export default function Sidebar () {
   const [open, cycleOpen]: any = useCycle(false, true)
   return (
     <>
-      <aside className='hidden lg:block justify-center fixed bg-white dark:bg-gray-background 7 h-screen w-1/6 max-w-1/6 pt-10'>
+      <aside className='hidden lg:block justify-center sticky top-0 left-0 bg-white dark:bg-gray-background 7 h-screen w-1/6 min-w-1/6 max-w-1/6 pt-10'>
         <a href='/'>
           <motion.div
             animate='active'
@@ -51,7 +51,7 @@ export default function Sidebar () {
           <Link href='/work'>
             <a
               className={`flex items-center dark:text-white text-black py-4 hover:text-blue-300 ${
-                router.pathname == '/portfolio'
+                router.pathname == '/work'
                   ? 'visited:text-blue-137 dark:visited:text-blue-137'
                   : ''
               }`}

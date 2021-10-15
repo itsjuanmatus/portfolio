@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-wrap min-h-screen py-2 px-10 lg:px-96 bg-white dark:bg-gray-background overflow-x-hidden">
+    <div className="flex flex-col flex-wrap min-h-screen py-2 px-10 lg:ml-auto bg-white dark:bg-gray-background overflow-x-hidden">
       <Head>
         <title>Juan Matus</title>
         <link rel="icon" href="/favicon.svg" />

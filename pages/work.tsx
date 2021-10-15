@@ -22,7 +22,7 @@ function BulletTriangle ({ text }) {
     </div>
   )
 }
-export default function contact () {
+export default function work () {
   const router = useRouter()
 
   async function handleOnSubmit (e) {
@@ -45,14 +45,14 @@ export default function contact () {
   }
 
   return (
-    <div className='flex flex-col flex-wrap min-h-screen py-2 px-5 lg:px-96 bg-white dark:bg-gray-background overflow-x-hidden'>
+    <div className="flex flex-col flex-wrap min-h-screen py-2 px-5 md:px-10 lg:ml-32 bg-white dark:bg-gray-background overflow-x-hidden">
       <Head>
         <title>Juan Matus</title>
         <link rel='icon' href='/favicon.svg' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       </Head>
 
-      <main className='grid grid-cols-1 md:grid-cols-2 min-w-max flex-1 mt-10 md:mt-24 justify-center'>
+      <main className='grid grid-cols-1 w-auto flex-1 mt-10 lg:mt-24'>
         <div className='max-w-xs md:max-w-xl'>
           <motion.div
             initial={{ x: 100 }}
@@ -73,7 +73,7 @@ export default function contact () {
                   </h3>
                   <h3 className='text-lg text-gray-500 '>Jan 2021 - Present</h3>
                 </div>
-                <p className='text-md text-gray-500 mb-3 '>
+                <p className='text-md text-gray-500 mb-3'>
                   Probably the most challenging job I’ve had. Learning about
                   natural language processing and semantic web technologies on
                   the go. However, it’s been fun and it has definitely made me a

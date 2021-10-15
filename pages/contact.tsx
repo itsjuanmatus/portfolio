@@ -26,14 +26,14 @@ export default function contact () {
   }
 
   return (
-    <div className='flex flex-col flex-wrap min-h-screen py-2 px-5 lg:px-96 bg-white dark:bg-gray-background overflow-x-hidden'>
+    <div className="flex flex-col flex-wrap min-h-screen py-2 px-10 lg:ml-32 bg-white dark:bg-gray-background overflow-x-hidden">
       <Head>
         <title>Juan Matus</title>
         <link rel='icon' href='/favicon.svg' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       </Head>
 
-      <main className='grid grid-cols-1 md:grid-cols-2 min-w-max flex-1 mt-10 md:mt-24 justify-center'>
+      <main className='grid grid-cols-1 w-auto flex-1 mt-10 lg:mt-24'>
         <div className='max-w-xs md:max-w-xl'>
           <motion.div
             initial={{ x: 100 }}
