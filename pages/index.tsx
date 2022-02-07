@@ -17,7 +17,7 @@ export default function Home() {
         />
       </Head>
 
-      <main className="grid grid-cols-1 mb-16 md:grid-cols-2 min-w-full flex-1 mt-5 md:mt-24 md:gap-x-10 lg:gap-x-36">
+      <main className="grid grid-cols-1 mb-16 md:grid-cols-2 min-w-full flex-1 mt-5 md:mt-24 md:gap-x-10 lg:gap-x-26">
         <div className="min-w-full lg:max-w-lg lg:w-72">
           <motion.div
             animate="visible"
