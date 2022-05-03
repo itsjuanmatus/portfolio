@@ -73,7 +73,7 @@ export const workHistory = [
   {
     company: 'Nicasource',
     title: 'Software Engineer',
-    startDate: 'Jan 2021',
+    startDate: 'Nov 2021',
     endDate: 'Present',
     description: '',
     highlights: [],
