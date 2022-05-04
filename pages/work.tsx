@@ -68,7 +68,7 @@ export default function work() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <main className="flex flex-col px-5 lg:px-0 lg:items-start w-[5/6] mt-10 lg:mt-24">
+      <main className="flex flex-col px-5 lg:px-0 lg:items-start w-[5/6] mt-10 ">
         <div className="max-w-xs md:max-w-xl">
           <motion.div
             initial={{ x: 100 }}
