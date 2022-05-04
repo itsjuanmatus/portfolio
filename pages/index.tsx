@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <motion.div
-      className="flex flex-col pt-10 md:pt-0 md:justify-center h-screen lg:ml-[1/6] lg:w-full bg-white dark:bg-gray-background overflow-x-hidden "
+      className="flex flex-col pt-10 md:pt-0 md:justify-start mt-[10%] h-screen lg:ml-[1/6] lg:w-full bg-white dark:bg-gray-background overflow-x-hidden "
       exit={{
         opacity: 0,
       }}
