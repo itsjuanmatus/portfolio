@@ -1,16 +1,5 @@
 export const workHistory = [
   {
-    company: 'HOTEL SAN LUIS',
-    title: 'App Developer - Contract',
-    startDate: 'Aug 2018',
-    endDate: 'Dec 2018',
-    description: 'Guests Service App for a little hotel in Managua, Nicaragua',
-    highlights: [
-      'Designed User Interface and prototype in AdobeXd.',
-      'As you would expect: I used Swift and XCode.',
-    ],
-  },
-  {
     company: 'QUENCA',
     title: 'Frontend Web Developer',
     startDate: 'Jan 2020',
@@ -19,32 +8,9 @@ export const workHistory = [
     highlights: [
       'UX/UI Website Design in Figma.',
       'Mostly worked with ReactJS.',
-      'IT Support for a month.',
     ],
   },
-  {
-    company: 'FUNDACIÓN COSTA RICA',
-    title: 'Creative Developer - Freelancing',
-    startDate: 'Jan 2021',
-    endDate: 'May 2021',
-    description: '',
-    highlights: [
-      'UX/UI Website Design in Figma.',
-      'Recorded and edited video content for their website.',
-      'Developed and shipped highly interactive web features.',
-    ],
-  },
-  {
-    company: 'TOP MONKEY MEDIA',
-    title: 'Freelancing - Wordpress Web Developer',
-    startDate: 'May 2021',
-    endDate: 'Aug 2021',
-    description: '',
-    highlights: [
-      'Mostly worked with CSS and Elementor',
-      'Delivered highly interactive websites for many clients',
-    ],
-  },
+
   {
     company: 'NIUTEK',
     title: 'React Frontend Developer',
@@ -75,7 +41,7 @@ export const workHistory = [
     title: 'Software Engineer',
     startDate: 'Nov 2021',
     endDate: 'Present',
-    description: '',
+    description: 'React Frontend Developer',
     highlights: [],
   },
 ];

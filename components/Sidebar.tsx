@@ -1,10 +1,8 @@
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import useDarkMode from './useDarkMode';
-import { useEffect, useState } from 'react';
-import { Transition } from '@headlessui/react';
 import { AnimatePresence, motion, useCycle } from 'framer-motion';
-import * as Icon from 'react-bootstrap-icons';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import useDarkMode from './useDarkMode';
 
 export default function Sidebar() {
   useEffect(() => {

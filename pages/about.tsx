@@ -1,26 +1,41 @@
-import Head from 'next/head';
-import ReactIcon from '../components/frameworks/ReactIcon';
-import WordpressIcon from '../components/frameworks/WordpressIcon';
-import TypeScriptIcon from '../components/frameworks/TypeScriptIcon';
-import SassIcon from '../components/frameworks/SassIcon';
-import NextIcon from '../components/frameworks/NextIcon';
-import ExpressIcon from '../components/frameworks/ExpressIcon';
-import FlureeIcon from '../components/frameworks/FlureeIcon';
-import TailwindIcon from '../components/frameworks/TailwindIcon';
-import JavaScriptIcon from '../components/frameworks/JavaScriptIcon';
-import CssIcon from '../components/frameworks/CssIcon';
 import { motion } from 'framer-motion';
+import Head from 'next/head';
+import CssIcon from '../components/frameworks/CssIcon';
+import JavaScriptIcon from '../components/frameworks/JavaScriptIcon';
+import NextIcon from '../components/frameworks/NextIcon';
+import ReactIcon from '../components/frameworks/ReactIcon';
+import SassIcon from '../components/frameworks/SassIcon';
+import TailwindIcon from '../components/frameworks/TailwindIcon';
+import TypeScriptIcon from '../components/frameworks/TypeScriptIcon';
 
 export default function about() {
   return (
-    <div className="flex flex-col flex-wrap min-h-screen py-2 px-10 lg:ml-32 bg-white dark:bg-gray-background overflow-x-hidden">
+    <motion.div
+      className="flex flex-col min-h-screen py-2 px-10 lg:ml-[1/6] lg:w-full items-start  bg-white dark:bg-gray-background overflow-x-hidden"
+      exit={{
+        opacity: 0,
+      }}
+      initial="hidden"
+      animate="show"
+      variants={{
+        hidden: {
+          opacity: 0,
+        },
+        show: {
+          opacity: 1,
+          transition: {
+            duration: 0.3,
+          },
+        },
+      }}
+    >
       <Head>
         <title>About - Juan Matus</title>
         <link rel="icon" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <main className="grid grid-cols-1 w-auto flex-1 mt-10 lg:mt-24">
+      <main className="flex flex-col mt-10 lg:items-center w-[5/6]">
         <div className="max-w-2xl">
           <motion.div
             initial={{ x: -100 }}
@@ -67,16 +82,20 @@ export default function about() {
               talented people along the way.
             </p>
             <h1 className="text-3xl font-bold mb-3 dark:text-white font-sans">
-              2+ <a className="text-lg">years of experience</a>
+              {/** From January 2020 until now 2.4+ years of experience */}
+              {new Date().getFullYear() - 2020}+{' '}
+              <a className="text-lg">years of experience</a>
             </h1>
             <h1 className="text-3xl font-bold mb-3 dark:text-white font-sans">
               3+ <a className="text-lg">failed startups</a>
             </h1>
             <h1 className="text-3xl font-bold mb-5 dark:text-white font-sans">
-              8+ <a className="text-lg">company worked</a>
+              10+ <a className="text-lg">company worked</a>{' '}
+              <span className="text-xs">(including freelancing)</span>
             </h1>
             <h1 className="text-3xl font-bold mb-3 dark:text-white font-sans">
-              5+ <a className="text-lg">years of coding</a>
+              {new Date().getFullYear() - 2015}+{' '}
+              <a className="text-lg">years of coding</a>
             </h1>
           </motion.div>
           <div className="divide-y mb-5">
@@ -117,13 +136,6 @@ export default function about() {
             </div>
 
             <div className="inline-flex items-center space-x-3">
-              <WordpressIcon styles="flex-1 w-10 fill-current text-purple-138 dark:text-gray-137 p-1" />
-              <h3 className="flex-1 text-xl font-thin text-purple-138 dark:text-white font-sans">
-                wordpress
-              </h3>
-            </div>
-
-            <div className="inline-flex items-center space-x-3">
               <SassIcon styles="flex-1 w-10 fill-current text-purple-138 dark:text-gray-137 p-1" />
               <h3 className="flex-1 text-xl font-thin text-purple-138 dark:text-white font-sans">
                 sass
@@ -133,13 +145,6 @@ export default function about() {
               <TailwindIcon styles="flex-1 w-10 fill-current text-purple-138 dark:text-gray-137 p-1" />
               <h3 className="flex-1 text-xl font-thin text-purple-138 dark:text-white font-sans">
                 tailwindcss
-              </h3>
-            </div>
-
-            <div className="inline-flex items-center space-x-3">
-              <FlureeIcon styles="flex-1 w-10 fill-current text-purple-138 dark:text-gray-137 p-1" />
-              <h3 className="flex-1 text-xl font-thin text-purple-138 dark:text-white font-sans">
-                fluree
               </h3>
             </div>
 
@@ -163,6 +168,6 @@ export default function about() {
           <img src="/favicon.svg" className="w-7 mx-3" />
         </a>
       </footer>
-    </div>
+    </motion.div>
   );
 }

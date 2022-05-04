@@ -46,14 +46,29 @@ export default function work() {
   }
 
   return (
-    <div className="flex flex-col flex-wrap min-h-screen py-2 px-5 lg:ml-32 bg-white dark:bg-gray-background overflow-x-hidden">
+    <motion.div
+      className="flex flex-col flex-wrap min-h-screen py-2 px-5 lg:ml-[1/6] lg:w-full bg-white dark:bg-gray-background overflow-x-hidden"
+      initial="hidden"
+      animate="show"
+      variants={{
+        hidden: {
+          opacity: 0,
+        },
+        show: {
+          opacity: 1,
+          transition: {
+            duration: 0.3,
+          },
+        },
+      }}
+    >
       <Head>
         <title>Juan Matus</title>
         <link rel="icon" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <main className="grid grid-cols-1 w-auto flex-1 mt-10 lg:mt-24">
+      <main className="flex flex-col px-5 lg:px-0 lg:items-start w-[5/6] mt-10 lg:mt-24">
         <div className="max-w-xs md:max-w-xl">
           <motion.div
             initial={{ x: 100 }}
@@ -103,6 +118,6 @@ export default function work() {
           <img src="/favicon.svg" className="w-7 mx-3" />
         </a>
       </footer>
-    </div>
+    </motion.div>
   );
 }
