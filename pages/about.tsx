@@ -157,17 +157,6 @@ export default function about() {
           </div>
         </div>
       </main>
-
-      <footer className="flex items-center justify-center w-full h-24 ">
-        <a
-          className="flex items-center justify-center dark:text-white"
-          href="/about"
-          target="_blank"
-        >
-          Powered by
-          <img src="/favicon.svg" className="w-7 mx-3" />
-        </a>
-      </footer>
     </motion.div>
   );
 }

@@ -68,7 +68,7 @@ export default function work() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <main className="flex flex-col px-5 lg:px-0 lg:items-start w-[5/6] mt-10 ">
+      <main className="flex flex-col max-w-full lg:px-0 lg:items-start w-[5/6] mt-10 ">
         <div className="max-w-xs md:max-w-xl">
           <motion.div
             initial={{ x: 100 }}
@@ -107,17 +107,6 @@ export default function work() {
           </motion.div>
         </div>
       </main>
-
-      <footer className="flex items-center justify-center w-full h-24 ">
-        <a
-          className="flex items-center justify-center dark:text-white"
-          href="/about"
-          target="_blank"
-        >
-          Powered by
-          <img src="/favicon.svg" className="w-7 mx-3" />
-        </a>
-      </footer>
     </motion.div>
   );
 }
