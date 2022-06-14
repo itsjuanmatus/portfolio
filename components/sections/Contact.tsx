@@ -21,6 +21,12 @@ export default function Contact() {
             </a>
           ))}
         </div>
+        <a
+          href="mailto:juanmatusg16@gmail.com"
+          className="text-white text-sm text-center mt-3"
+        >
+          juanmatusg16@gmail.com
+        </a>
       </div>
     </div>
   );

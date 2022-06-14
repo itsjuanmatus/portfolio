@@ -36,7 +36,14 @@ export default function MobileNav() {
       }
     >
       <Hamburger open={open} cycleOpen={cycleOpen} />
-      <h2 className="text-white font-bold ">Juan Matus</h2>
+      <button
+        onClick={() => {
+          if (open) cycleOpen();
+          actions.goToHome();
+        }}
+      >
+        <h2 className="text-white font-bold ">Juan Matus</h2>
+      </button>
       <Sidebar open={open} items={items} cycleOpen={cycleOpen} />
     </div>
   );

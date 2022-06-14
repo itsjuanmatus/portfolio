@@ -7,6 +7,8 @@ import MobileNav from '../components/navigation/MobileNav';
 import About from '../components/sections/About';
 import Experience from '../components/sections/Experience';
 import Contact from '../components/sections/Contact';
+import { sections } from '../components/animations/sections';
+import DownloadCV from '../components/atom/DownloadCV';
 
 export const MainContext = createContext(
   {} as {
@@ -22,7 +24,7 @@ export const MainContext = createContext(
 
 export default function Home() {
   const initialState = {
-    showing: 'contact',
+    showing: 'home',
   };
 
   const size = useWindowResize();
@@ -101,21 +103,14 @@ export default function Home() {
             }}
             className="-mt-[30vh] hidden md:flex"
           >
-            <p className="text-white">Download CV</p>
+            <DownloadCV />
           </motion.div>
         )}
         {state.showing === 'about' && (
           <motion.div
             className="w-full flex flex-col items-center"
             initial={{ opacity: 0 }}
-            animate={{
-              opacity: 1,
-              transition: {
-                delay: 0.75,
-                duration: 1.5,
-                ease: 'easeInOut',
-              },
-            }}
+            animate={sections}
           >
             <About />
           </motion.div>
@@ -124,14 +119,7 @@ export default function Home() {
           <motion.div
             className="w-full flex flex-col items-center"
             initial={{ opacity: 0 }}
-            animate={{
-              opacity: 1,
-              transition: {
-                delay: 0.75,
-                duration: 1.5,
-                ease: 'easeInOut',
-              },
-            }}
+            animate={sections}
           >
             <Experience />
           </motion.div>
@@ -140,14 +128,7 @@ export default function Home() {
           <motion.div
             className="w-full flex flex-col items-center"
             initial={{ opacity: 0 }}
-            animate={{
-              opacity: 1,
-              transition: {
-                delay: 0.75,
-                duration: 1.5,
-                ease: 'easeInOut',
-              },
-            }}
+            animate={sections}
           >
             <Contact />
           </motion.div>

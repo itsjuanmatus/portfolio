@@ -1,9 +1,11 @@
 import DownArrow from './DownArrow';
 import ChevronRight from './ChevronRight';
+import Download from './Download';
 
 const icons: any = {
   'down-arrow': DownArrow,
   'chevron-right': ChevronRight,
+  download: Download,
 };
 
 interface Icon {

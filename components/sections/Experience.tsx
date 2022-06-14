@@ -4,6 +4,7 @@ import Card from '../atom/carousel/Card';
 import Icon from '../atom/icons';
 import Title from '../atom/Title';
 import useSound from 'use-sound';
+import DownloadCV from '../atom/DownloadCV';
 
 export default function Experience() {
   const [imageOnView, setImageOnView] = React.useState(0);
@@ -55,7 +56,7 @@ export default function Experience() {
   }
 
   return (
-    <div className="flex flex-col top-[17vh] absolute">
+    <div className="flex flex-col top-[17vh] absolute items-center">
       <Title title="experience" />
       <div className="flex flex-col md:flex-row items-center md:gap-x-10 mt-8 mx-auto">
         <button onClick={prevCard} className="z-10 hidden md:flex">
@@ -110,6 +111,9 @@ export default function Experience() {
             />
           </button>
         </div>
+      </div>
+      <div className='hidden md:flex mt-[7.5vh]'>
+        <DownloadCV />
       </div>
     </div>
   );
