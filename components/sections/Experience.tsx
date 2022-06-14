@@ -59,7 +59,13 @@ export default function Experience() {
     <div className="flex flex-col top-[17vh] absolute items-center">
       <Title title="experience" />
       <div className="flex flex-col md:flex-row items-center md:gap-x-10 mt-8 mx-auto">
-        <button onClick={prevCard} className="z-10 hidden md:flex">
+        <button
+          onClick={prevCard}
+          className={`z-10 hidden md:flex ${
+            imageOnView === 0 && 'md:opacity-0 cursor-default'
+          }`}
+          disabled={imageOnView === 0}
+        >
           <Icon
             name="chevron-right"
             size={10}
@@ -90,11 +96,24 @@ export default function Experience() {
             </div>
           ))}
         </div>
-        <button onClick={nextCard} className="z-10 hidden md:flex">
+        <button
+          onClick={nextCard}
+          className={`z-10 hidden md:flex ${
+            imageOnView === experience.length - 1 &&
+            'md:opacity-0 cursor-default'
+          }`}
+          disabled={imageOnView === experience.length - 1}
+        >
           <Icon name="chevron-right" size={10} color="white" />
         </button>
         <div className="md:hidden flex justify-between w-[85vw] mt-5">
-          <button onClick={prevCard} className="z-10">
+          <button
+            onClick={prevCard}
+            className={`z-10 ${
+              imageOnView === 0 && 'opacity-0 cursor-default'
+            }`}
+            disabled={imageOnView === 0}
+          >
             <Icon
               name="down-arrow"
               size={13}
@@ -102,7 +121,14 @@ export default function Experience() {
               className="rotate-90 stroke-2"
             />
           </button>
-          <button onClick={nextCard} className="z-10">
+          <button
+            onClick={nextCard}
+            className={`z-10 ${
+              imageOnView === experience.length - 1 &&
+              'opacity-0 cursor-default'
+            }`}
+            disabled={imageOnView === experience.length - 1}
+          >
             <Icon
               name="down-arrow"
               size={13}
@@ -112,7 +138,7 @@ export default function Experience() {
           </button>
         </div>
       </div>
-      <div className='hidden md:flex mt-[7.5vh]'>
+      <div className="hidden md:flex mt-[7.5vh]">
         <DownloadCV />
       </div>
     </div>

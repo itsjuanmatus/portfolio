@@ -1,8 +1,8 @@
 export const sections = {
   opacity: 1,
   transition: {
-    delay: 0.75,
-    duration: 1.5,
+    delay: 0.60,
+    duration: 1,
     ease: 'easeInOut',
   },
 };

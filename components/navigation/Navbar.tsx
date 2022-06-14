@@ -92,7 +92,7 @@ export default function Navbar({ state, actions }) {
               : 0,
 
           transition: {
-            duration: 1.5,
+            duration: .75,
             ease: 'easeInOut',
           },
         }}
