@@ -53,7 +53,7 @@ export default function About() {
         {selected === 1 && (
           <div className="grid grid-cols-2 place-content-between w-full mt-5">
             <div className="flex flex-col gap-3">
-              <p className="font-extrabold text-[#269be4]">Typescript</p>
+              <p className="font-extrabold text-[#2660e4]">Typescript</p>
               {['ReactJS', 'NextJS', 'Redux', 'NodeJS', 'NestJS', 'Framer'].map(
                 (skill, index) => (
                   <p key={index} className="text-white font-extrabold">
