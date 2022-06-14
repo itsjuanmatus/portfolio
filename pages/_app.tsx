@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps, router }) {
   useEffect(() => {
     const moveCursor = (e) => {
       const x = e.clientX + 5;
-      const y = e.clientY - 16;
+      const y = e.clientY - 10;
       setCursorXY({ x, y });
     };
     window.addEventListener('mousemove', moveCursor);
