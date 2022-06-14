@@ -17,7 +17,7 @@ export default function Card({
       <p className="font-bold">Description</p>
       <ul className="flex flex-col items-center">
         {description.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index} className='text-center'>{item}</li>
         ))}
       </ul>
     </div>
