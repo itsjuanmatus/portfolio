@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <AnimatePresence exitBeforeEnter>
       <Fragment key={router.route}>
-        <div className="overflow-x-hidden md:overflow-hidden h-screen bg-black flex flex-col">
+        <div className="overflow-x-hidden md:overflow-hidden h-screen bg-black flex flex-col great-parent">
           <Component {...pageProps} />
         </div>
         <div

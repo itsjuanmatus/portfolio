@@ -1,5 +1,5 @@
 import { motion, useAnimation } from 'framer-motion';
-import { useContext, useMemo } from 'react';
+import { useContext, useEffect, useMemo } from 'react';
 
 const path01Variants = {
   open: { d: 'M3.06061 2.99999L21.0606 21' },
@@ -16,7 +16,16 @@ export default function Hamburger({ open, cycleOpen }) {
   const path01Controls = useAnimation();
   const path02Controls = useAnimation();
 
-  
+  useEffect(() => {
+    if (open) {
+      // @ts-ignore
+      document.querySelector('.great-parent').style['overflow-y'] = 'hidden';
+    } else {
+      // @ts-ignore
+      document.querySelector('.great-parent').style['overflow-y'] = 'auto';
+    }
+  }, [open]);
+
   useMemo(async () => {
     if (open) {
       await path02Controls.start(path02Variants.moving);
