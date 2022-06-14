@@ -1,7 +1,7 @@
 import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
 import { AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 
 function MyApp({ Component, pageProps, router }) {
   const [isLoaded, setLoaded] = useState(false);
@@ -24,24 +24,25 @@ function MyApp({ Component, pageProps, router }) {
     };
   }, []);
 
- 
-
   if (!isLoaded) {
     return <></>;
   }
+
   return (
     <AnimatePresence exitBeforeEnter>
-      <div
-        className="cursor"
-        style={{
-          transform: `translate3d(${cursorXY.x}px, ${cursorXY.y}px, 0)`,
-          // add a small delay to the exit animation
-          transition: 'transform 0.2s ease-out',
-        }}
-      />
-      <div className="overflow-x-hidden md:overflow-hidden h-screen bg-black flex flex-col">
-        <Component {...pageProps} key={router.route} />
-      </div>
+      <Fragment key={router.route}>
+        <div className="overflow-x-hidden md:overflow-hidden h-screen bg-black flex flex-col">
+          <Component {...pageProps} />
+        </div>
+        <div
+          className="cursor hidden md:flex"
+          style={{
+            transform: `translate3d(${cursorXY.x}px, ${cursorXY.y}px, 0)`,
+            // add a small delay to the exit animation
+            transition: 'transform 0.2s ease-out',
+          }}
+        />
+      </Fragment>
     </AnimatePresence>
   );
 }

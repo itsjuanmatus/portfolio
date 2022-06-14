@@ -1,15 +1,19 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import useWindowSize from '../../hooks/useWindowResize';
 
 export default function Navbar({ state, actions }) {
   const homeLi = useRef(null),
     aboutLi = useRef(null),
     experienceLi = useRef(null),
     contactLi = useRef(null);
+
+  const size = useWindowSize();
+
   return (
     <motion.div
       animate={{
-        y: state.showing === 'home' ? '35vh' : '-10vh',
+        y: state.showing === 'home' ? '35vh' : size.width < 991 ? '-5vh' : '-10vh',
         transition: {
           duration: 1.5,
           ease: 'easeInOut',
@@ -17,7 +21,7 @@ export default function Navbar({ state, actions }) {
       }}
     >
       <motion.h1
-        className="text-white text-[5rem] font-bold"
+        className="text-white text-[5rem] font-extrabold leading-[5rem] md:leading-normal text-center"
         animate={{
           opacity: state.showing === 'home' ? 1 : 0,
           transition: {
@@ -28,7 +32,7 @@ export default function Navbar({ state, actions }) {
       >
         Juan Matus
       </motion.h1>
-      <motion.ul className="flex items-center gap-x-10 w-full">
+      <motion.ul className="md:flex items-center gap-x-10 w-full hidden">
         <li
           className="w-full text-white font-light text-center cursor-pointer"
           onClick={actions.goToHome}
@@ -59,7 +63,7 @@ export default function Navbar({ state, actions }) {
         </li>
       </motion.ul>
       <motion.div
-        className="bg-white h-[9px] w-[9px] rounded-full"
+        className="bg-white h-[9px] w-[9px] rounded-full hidden md:block"
         animate={{
           // center behind first li
           x:
@@ -93,6 +97,22 @@ export default function Navbar({ state, actions }) {
           },
         }}
       />
+      <motion.p
+        className={
+          'text-white text-center font-extralight text-lg md:hidden mt-8 ' +
+          (state.showing !== 'home' && 'hidden')
+        }
+        animate={{
+          opacity: [0.3, 1, 0.3],
+          transition: {
+            duration: 2,
+            ease: 'easeInOut',
+            repeat: Infinity,
+          },
+        }}
+      >
+        tap anywhere to start
+      </motion.p>
     </motion.div>
   );
 }
