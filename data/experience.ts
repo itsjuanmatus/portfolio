@@ -4,12 +4,12 @@ export const experience = [
     position: 'Software Engineer',
     time: 'Nov 2021 - Present',
     description: [
-      'React JS Frontend Developer',
-      'Integrated app with Stripe Subscriptions',
-      'Developed a messaging app',
-      'Delivered tested high quality code',
-      'Refactored and optimized a lot of legacy code',
-      'Brought to reality very interactive designs',
+      'React JS Frontend Developer.',
+      'Integrated app with Stripe Subscriptions.',
+      'Developed a messaging app.',
+      'Delivered tested high quality code.',
+      'Refactored and optimized a lot of legacy code.',
+      'Brought to reality very interactive designs.',
     ],
   },
   {
@@ -17,9 +17,9 @@ export const experience = [
     position: 'Full Stack Developer',
     time: 'Jan 2021 - Nov 2021',
     description: [
-      'Mostly worked with NextJS, Typescript, ExpressJS, GraphQL, and FlureeDB.',
-      'Designed both User Experience and User Interface in Figma.',
-      'Worked with Natural Language Processing in Python using the wordnet library.',
+      'Stack: NextJS, Typescript, ExpressJS, GraphQL, and FlureeDB.',
+      'Designed both UX and UI in Figma.',
+      'Applied Natural Language Processing in Python using the wordnet library.',
     ],
   },
   {
@@ -27,7 +27,7 @@ export const experience = [
     position: 'React Frontend Developer',
     time: 'Sept 2020 - May 2021',
     description: [
-      'Mostly worked with NextJS and Typescript.',
+      'Stack: NextJS, Typescript and TailwindCSS.',
       'Designed User Interface in AdobeXd.',
       'Developed and shipped highly interactive features.',
     ],
@@ -37,7 +37,7 @@ export const experience = [
     position: 'Frontend Web Developer',
     time: 'Jan 2020 - May 2020',
     description: [
-      'Mostly worked with ReactJS.',
+      'Developed Internal Management application using React, NextJS and TailwindCSS.',
       'UX/UI Website Design in Figma.',
     ],
   },
