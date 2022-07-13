@@ -1,6 +1,6 @@
 # My Personal Website
 
-### This portfolio was built using
+### This website was built using
 
 1. NextJS
 2. TailwindCSS
