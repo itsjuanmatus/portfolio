@@ -1,10 +1,10 @@
 export const experience = [
   {
     name: 'NICASOURCE',
-    position: 'Software Engineer',
+    position: 'Frontend Engineer and Engineering Team Lead',
     time: 'Nov 2021 - Present',
     description: [
-      'React JS Frontend Developer.',
+      'Led a team of 4 engineers.',
       'Integrated app with Stripe Subscriptions.',
       'Developed a messaging app.',
       'Delivered tested high quality code.',

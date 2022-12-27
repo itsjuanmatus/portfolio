@@ -19,7 +19,7 @@ export default function ChevronRight({
         stroke={color}
         stroke-width="2"
         stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

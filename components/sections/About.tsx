@@ -36,7 +36,7 @@ export default function About() {
         {selected === 0 && (
           <div className="text-white text-center mt-5 flex flex-col gap-5 font-light">
             <p>
-              I'm Juan Matus, a passionately curious software developer from
+              I'm Juan Matus, a passionately curious Frontend Engineer from
               Nicaragua.
             </p>
             <p>

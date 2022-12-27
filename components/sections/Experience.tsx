@@ -1,19 +1,19 @@
-import React from 'react';
-import { experience } from '../../data/experience';
-import Card from '../atom/carousel/Card';
-import Icon from '../atom/icons';
-import Title from '../atom/Title';
-import useSound from 'use-sound';
-import DownloadCV from '../atom/DownloadCV';
+import React from "react";
+import useSound from "use-sound";
+import { experience } from "../../data/experience";
+import Card from "../atom/carousel/Card";
+import DownloadCV from "../atom/DownloadCV";
+import Icon from "../atom/icons";
+import Title from "../atom/Title";
 
 export default function Experience() {
   const [imageOnView, setImageOnView] = React.useState(0);
   const [touchStart, setTouchStart] = React.useState(0);
   const [touchEnd, setTouchEnd] = React.useState(0);
 
-  const [playActive] = useSound('/sounds/pop-down.mp3', { volume: 0.25 });
-  const [playOn] = useSound('/sounds/pop-up-on.mp3', { volume: 0.25 });
-  const [playOff] = useSound('/sounds/pop-up-off.mp3', { volume: 0.25 });
+  const [playActive] = useSound("/sounds/pop-down.mp3", { volume: 0.25 });
+  const [playOn] = useSound("/sounds/pop-up-on.mp3", { volume: 0.25 });
+  const [playOff] = useSound("/sounds/pop-up-off.mp3", { volume: 0.25 });
 
   const prevCard = () => {
     playOff();
@@ -62,7 +62,7 @@ export default function Experience() {
         <button
           onClick={prevCard}
           className={`z-10 hidden md:flex ${
-            imageOnView === 0 && 'md:opacity-0 cursor-default'
+            imageOnView === 0 && "md:opacity-0 cursor-default"
           }`}
           disabled={imageOnView === 0}
         >
@@ -88,7 +88,7 @@ export default function Experience() {
               className="mx-auto"
               style={{
                 opacity: imageOnView === index ? 1 : 0,
-                transition: 'opacity 500ms',
+                transition: "opacity 500ms",
                 zIndex: -1,
               }}
             >
@@ -100,7 +100,7 @@ export default function Experience() {
           onClick={nextCard}
           className={`z-10 hidden md:flex ${
             imageOnView === experience.length - 1 &&
-            'md:opacity-0 cursor-default'
+            "md:opacity-0 cursor-default"
           }`}
           disabled={imageOnView === experience.length - 1}
         >
@@ -110,7 +110,7 @@ export default function Experience() {
           <button
             onClick={prevCard}
             className={`z-10 ${
-              imageOnView === 0 && 'opacity-0 cursor-default'
+              imageOnView === 0 && "opacity-0 cursor-default"
             }`}
             disabled={imageOnView === 0}
           >
@@ -125,7 +125,7 @@ export default function Experience() {
             onClick={nextCard}
             className={`z-10 ${
               imageOnView === experience.length - 1 &&
-              'opacity-0 cursor-default'
+              "opacity-0 cursor-default"
             }`}
             disabled={imageOnView === experience.length - 1}
           >

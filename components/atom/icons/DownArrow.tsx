@@ -20,7 +20,7 @@ export default function DownArrow({
         d="M1 10L8 17L15 10M8 17V1V17Z"
         stroke={color}
         stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

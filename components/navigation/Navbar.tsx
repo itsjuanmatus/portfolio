@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import useWindowSize from '../../hooks/useWindowResize';
+import React, { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import useWindowSize from "../../hooks/useWindowResize";
 
 export default function Navbar({ state, actions }) {
   const homeLi = useRef(null),
@@ -13,20 +13,25 @@ export default function Navbar({ state, actions }) {
   return (
     <motion.div
       animate={{
-        y: state.showing === 'home' ? '35vh' : size.width < 991 ? '-5vh' : '-10vh',
+        y:
+          state.showing === "home"
+            ? "35vh"
+            : size.width < 991
+            ? "-5vh"
+            : "-10vh",
         transition: {
           duration: 1.5,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         },
       }}
     >
       <motion.h1
         className="text-white text-[5rem] font-extrabold leading-[5rem] md:leading-normal text-center"
         animate={{
-          opacity: state.showing === 'home' ? 1 : 0,
+          opacity: state.showing === "home" ? 1 : 0,
           transition: {
             duration: 1.5,
-            ease: 'easeInOut',
+            ease: "easeInOut",
           },
         }}
       >
@@ -67,23 +72,23 @@ export default function Navbar({ state, actions }) {
         animate={{
           // center behind first li
           x:
-            state.showing === 'home'
+            state.showing === "home"
               ? homeLi && homeLi.current
                 ? homeLi.current.offsetLeft + homeLi.current.offsetWidth / 2 - 5
                 : 0
-              : state.showing === 'about'
+              : state.showing === "about"
               ? aboutLi && aboutLi.current
                 ? aboutLi.current.offsetLeft +
                   aboutLi.current.offsetWidth / 2 -
                   5
                 : 0
-              : state.showing === 'experience'
+              : state.showing === "experience"
               ? experienceLi && experienceLi.current
                 ? experienceLi.current.offsetLeft +
                   experienceLi.current.offsetWidth / 2 -
                   5
                 : 0
-              : state.showing === 'contact'
+              : state.showing === "contact"
               ? contactLi && contactLi.current
                 ? contactLi.current.offsetLeft +
                   contactLi.current.offsetWidth / 2 -
@@ -92,27 +97,32 @@ export default function Navbar({ state, actions }) {
               : 0,
 
           transition: {
-            duration: .75,
-            ease: 'easeInOut',
+            duration: 0.75,
+            ease: "easeInOut",
           },
         }}
       />
-      <motion.p
-        className={
-          'text-white text-center font-extralight text-lg md:hidden mt-8 ' +
-          (state.showing !== 'home' && 'hidden')
-        }
-        animate={{
-          opacity: [0.3, 1, 0.3],
-          transition: {
-            duration: 2,
-            ease: 'easeInOut',
-            repeat: Infinity,
-          },
-        }}
-      >
-        tap anywhere to start
-      </motion.p>
+      {
+        // mobile
+        size.width < 768 && (
+          <motion.p
+            className={
+              "text-white text-center font-extralight text-lg md:hidden mt-8 " +
+              (state.showing !== "home" && "hidden")
+            }
+            animate={{
+              opacity: [0.3, 1, 0.3],
+              transition: {
+                duration: 2,
+                ease: "easeInOut",
+                repeat: Infinity,
+              },
+            }}
+          >
+            tap anywhere to start
+          </motion.p>
+        )
+      }
     </motion.div>
   );
 }
